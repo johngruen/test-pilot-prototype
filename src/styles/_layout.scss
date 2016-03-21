@@ -1,0 +1,84 @@
+#full-page-wrapper {
+  flex: 1;
+  min-height: 100vh;
+  width: 100%;
+
+  &.space-between {
+    @include flex-container(column, space-between, center);
+  }
+
+  &.centered {
+    @include flex-container(column, center, center);
+  }
+}
+
+.content-wrapper {
+  @include respond-to('big') {
+    width: 1000px;
+  }
+
+  @include respond-to('medium') {
+    width: 768px;
+  }
+
+  margin: 0 auto;
+  transition: width 500ms;
+}
+
+.spacer {
+  height: 50px;
+}
+
+.centered {
+  text-align: center;
+}
+
+hr {
+  color: $transparent-black-2;
+}
+
+.legal-information {
+  font-size: 12px;
+  margin: 0;
+  padding: 0 0 10px;
+  text-align: center;
+}
+
+
+.loading-pill {
+  padding: 10px;
+  position: relative;
+  border: 1px solid $transparent-white-3;
+  border-radius: 4px;
+
+  > * {
+    margin: 0;
+  }
+}
+
+
+.toast {
+  @include flex-container(row, flex-start, center);
+  animation: move-in-from-right 200ms;
+  background: $transparent-white-9;
+  color: $black;
+  right: 20px;
+  position: fixed;
+  top: 20px;
+  z-index: 999;
+  padding: 20px;
+  box-shadow: 0 0 5px $transparent-black-6;
+
+
+  .content {
+
+    h4 {
+      margin: 0 0 10px;
+      font-size: 17px;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

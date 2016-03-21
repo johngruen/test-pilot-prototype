@@ -1,0 +1,14 @@
+extends ./../partials/layout.jade
+
+block content
+  
+  .blue
+    #full-page-wrapper.centered(data-hook='no-found-page')
+      .centered-banner
+        #four-oh-four.delayed-fade-in.modal
+          header
+            h1.title Four Oh Four!
+          br
+          .modal-actions
+            a.button.default.large(data-l10n-id='home', href='/') Home
+        .copter.spin

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="48"
+     height="16"
+     viewBox="0 0 48 16">
+       
+  <style>
+    .icon-default {
+      fill: #999999;
+    }
+    
+    .icon-hover {
+      fill: #808080;
+    }
+    
+    .icon-active {
+      fill: #666666;
+    }
+  </style>
+       
+  <defs>
+    <circle id="shape-circle-base" cx="8" cy="8" r="7" />
+    
+    <g id="shape-i">
+      <circle cx="8" cy="5" r="1" />
+      <rect x="7" y="7" width="2" height="5" rx="1" ry="1" />
+    </g>
+    
+    <mask id="mask-ring-cutout">
+      <rect width="16" height="16" fill="#000" />
+      <use xlink:href="#shape-circle-base" fill="#fff" />
+      <circle cx="8" cy="8" r="6" fill="#000" />
+    </mask>
+  </defs>
+
+  <g id="site-info">
+    <use xlink:href="#shape-circle-base" mask="url(#mask-ring-cutout)" class="icon-default" />
+    <use xlink:href="#shape-i" class="icon-default" />
+  </g>
+
+  <g id="site-info-hover" transform="translate(16)">
+    <use xlink:href="#shape-circle-base" class="icon-hover" />
+    <use xlink:href="#shape-i" fill="#fff" />
+  </g>
+
+  <g id="site-info-active" transform="translate(32)">
+    <use xlink:href="#shape-circle-base" class="icon-active" />
+    <use xlink:href="#shape-i" fill="#fff" fill-opacity=".9" />
+  </g>
+
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16">
+  <path id="arrow-navigation-back" d="M14,6H6.5l3-3c0.4-0.4,0.4-1,0-1.4L8.7,0.7c-0.4-0.4-1-0.4-1.4,0L0.7,7.3 c-0.4,0.4-0.4,1,0,1.4l6.6,6.6c0.4,0.4,1,0.4,1.4,0l0.8-0.8c0.4-0.4,0.4-1.1,0-1.4l-3-3.1H14c0.6,0,1-0.2,1-0.8V7 C15,6.4,14.6,6,14,6z"/>
+</svg>

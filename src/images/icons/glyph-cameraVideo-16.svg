@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="stylesheet.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16">
+
+  <use xlink:href="defs.svg"/>
+
+  <g id="icon-webRTC-camera">
+  	<path d="M14,12.2l-3-2.7v2.1c0,0.8-0.6,1.4-1.3,1.4H2.3C1.6,13,1,12.4,1,11.6V4.4C1,3.6,1.6,3,2.3,3h7.4C10.4,3,11,3.6,11,4.4v2
+  		l3-2.7c0.3-0.3,0.6-0.4,1-0.3v9.1C14.7,12.6,14.3,12.5,14,12.2z"/>
+  </g>
+
+</svg>

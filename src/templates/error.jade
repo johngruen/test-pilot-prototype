@@ -1,0 +1,15 @@
+extends ./../partials/layout.jade
+
+block content
+
+  #full-page-wrapper.space-between.blue
+    include ./../partials/header.jade
+    .centered-banner
+      #four-oh-four.delayed-fade-in.modal
+        header
+          h1(data-l10n-id='errorHeading').title Whoops
+        .modal-content
+          p(data-l10n-id='errorMessage') Looks like we broke something. Maybe try again later :-\ 
+      .copter.spin
+    footer#main-footer.content-wrapper
+      include ./../partials/footer-links

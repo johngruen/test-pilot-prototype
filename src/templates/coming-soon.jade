@@ -1,0 +1,16 @@
+extends ./../partials/layout.jade
+
+block content
+  .blue#full-page-wrapper.space-between
+    header#main-header.content-wrapper
+      h1
+        span.firefox-logo
+        span #{title}
+    .centered-banner
+      .copter-wrapper
+        .copter.fly-up
+      h2 Something's up!
+
+    footer#main-footer.content-wrapper
+      include ./../partials/footer-links.jade
+

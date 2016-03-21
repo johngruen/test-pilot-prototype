@@ -1,0 +1,27 @@
+.copter-wrapper {
+  @include flex-container(column, center, center);
+  background-color: rgba($default, .1);
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px solid $transparent-white-4;
+  border-radius: 50%;
+  height: 170px;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 170px;
+
+  .blue & {
+    background-color: $transparent-white-1;
+  }
+
+  .modal-content & {
+    margin: 20px auto;
+  }
+}
+
+.copter {
+  @include hidpi-background-image('copter', 105px 81px);
+  height: 81px;
+  position: relative;
+  width: 105px;
+}

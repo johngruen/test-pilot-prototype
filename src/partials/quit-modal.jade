@@ -1,0 +1,24 @@
+.modal.quit-modal.no-display
+  h3.title Why are you stopping?
+  form.modal-content.modal-form
+    span.form-notification.no-display Please chose an option
+    ul.questions
+      li
+        input(type="radio" name="feedback" id="1")
+        label(for="1") This thing is broken!
+      li
+        input(type="radio" name="feedback" id="2")
+        label(for="2") I don't like this feature.
+      li
+        input(type="radio" name="feedback" id="3")
+        label(for="3") This isn't useful for me.
+      li
+        input(type="radio" name="feedback" id="4")
+        label(for="4") Something else.
+    div.additional-feedback.no-display
+      .text-area-label Do you have any additional feedback?
+      textarea(placeholder="what's on your mind")
+  .modal-actions
+    button.button.default.large(type='submit' name="feedback") Submit
+    a.modal-escape(data-hook='cancel-modal') cancel
+

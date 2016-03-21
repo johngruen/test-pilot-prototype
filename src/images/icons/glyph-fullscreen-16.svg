@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="stylesheet.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16">
+
+  <use xlink:href="defs.svg"/>
+
+  <g id="icon-fullscreen">
+  	<path d="M12,11V5l3,3L12,11z M5,12h6l-3,3L5,12z M10,11H6c-0.6,0-1-0.4-1-1V6c0-0.6,0.4-1,1-1h4c0.6,0,1,0.4,1,1v4
+  		C11,10.5,10.6,11,10,11z M10,8c0-0.6-0.4-1-1-1H7C6.4,7,6,7.4,6,8v1c0,0.6,0.4,1,1,1h2c0.6,0,1-0.4,1-1V8z M8,1l3,3H5L8,1z M4,5v6
+  		L1,8L4,5z"/>
+  </g>
+
+</svg>

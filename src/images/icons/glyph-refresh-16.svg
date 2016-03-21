@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="stylesheet.css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     x="0"
+     y="0"
+     width="16"
+     height="16"
+     viewBox="0 0 16 16">
+
+  <use xlink:href="defs.svg"/>
+
+  <g id="icon-refresh">
+  	<path class="icon-toolbar" d="M15,8H8l2.8-2.8c-0.7-0.5-1.4-0.7-2.3-0.7c-2.2,0-4,1.8-4,4s1.8,4,4,4c1.4,0,2.7-0.7,3.4-1.9l2.3,1c-1.1,2-3.2,3.4-5.7,3.4 C4.9,15,2,12.1,2,8.5S4.9,2,8.5,2c1.5,0,2.9,0.5,4.1,1.4L15,1V8z"/>
+  </g>
+
+</svg>

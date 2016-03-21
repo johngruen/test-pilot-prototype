@@ -1,0 +1,84 @@
+extends ./../partials/layout.jade
+
+block content
+  #activity-stream-page
+    .blue
+      include ./../partials/header.jade
+    .spacer
+    .details-header-wrapper
+      .details-header.content-wrapper
+        // span.active-span.no-display(data-response="enable") Now Active
+        h1 Activity Stream
+        span(class="now-active" data-response="enable" data-l10n-id="nowActive").no-display Now Active
+        .actions.no-display(data-response="enable")
+          button.button.secondary(data-hook='disable')
+            span Disable
+            .state-change-inner.no-display
+          button.button.default(data-hook='feedback')
+            span Give Feedback
+            .state-change-inner.no-display
+        .actions(data-response="enable")
+          span
+          button.button.default(data-trigger="enable") 
+            span Enable Activity Stream
+            .state-change-inner.no-display
+        .count
+          span 1,976
+          span.count-icon
+    .details-content.content-wrapper
+      .details-overview
+        .experiment-icon-wrapper(style='background: linear-gradient(#{tests[0].colorway[2]},#{tests[0].colorway[0]},#{tests[0].colorway[1]})')
+          .experiment-icon.activity-stream
+        section.measurement
+          h3 Measurements
+          p.disclaimer All data is collected anonymously and used only to help us improve this test
+          div
+            ul
+              li Top sites selected
+              li Spotlight items selected
+              li Pizzas eaten
+              li Activity Steam visits
+        section
+          h3 Brought to you by
+          ul.contributors
+            li 
+              img.avatar(src="//www.gravatar.com/avatar/d2079ea737dae225f261224882b65e0a?s=64" width=56 height=56)
+              span john gruen
+            li 
+              img.avatar(src="//www.gravatar.com/avatar/d2079ea737dae225f261224882b65e0a?s=64" width=56 height=56)
+              span Chris P Bacon
+            li 
+              img.avatar(src="//www.gravatar.com/avatar/d2079ea737dae225f261224882b65e0a?s=64" width=56 height=56)
+              span Lincoln Navigator
+        section
+          h3 Details
+            table.stats
+              tr
+                td version
+                td LINK
+              tr
+                td changelog
+                td LINK
+              tr
+                td contrubute
+                td LINK
+
+      .details-description
+        p.long-desc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin interdum tellus sollicitudin ante dictum, at aliquet urna fermentum. In ac molestie eros. Pellentesque elit leo, suscipit porta lectus in, dapibus feugiat urna. Sed id elit nec orci pellentesque blandit. Nam vitae sapien congue risus laoreet fringilla eu non mauris.
+        .details-image
+          .image
+          .caption <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit.
+        .details-image
+          .image
+          .caption <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit.
+        .details-image
+          .image
+          .caption <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit.
+        .details-image
+          .image
+          .caption <b>Lorem</b> ipsum dolor sit amet, consectetur adipiscing elit.
+
+    include ./../partials/modals.jade
+
+    include ./../partials/toast.jade
+

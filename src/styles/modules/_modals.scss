@@ -1,0 +1,305 @@
+#four-oh-four {
+  &:after {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid $white;
+    bottom: -14px;
+    content: '';
+    height: 0;
+    left: 50%;
+    margin-left: -13px;
+    position: absolute;
+    width: 0;
+  }
+
+  + .copter {
+    left: 5px;
+    margin: 0 auto;
+    top: 30px;
+  }
+}
+
+.modal-container {
+  @include flex-container(row, center, center);
+  animation: fade-in 500ms forwards;
+  background: $transparent-black-7;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.modal {
+  animation: move-up-fade-in 500ms;
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0 4px 20px $transparent-black-5;
+  color: $black;
+  position: relative;
+  width: 420px;
+
+  .title {
+    background-color: $default;
+    border-top-left-radius: $feedback-modal-border-radius;
+    border-top-right-radius: $feedback-modal-border-radius;
+    color: $white;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 18px 0 14px;
+    text-align: center;
+
+    .blue &,
+    .onboarding & {
+      background-color: $white;
+      color: $black;
+      padding: 20px 0 0;
+    }
+
+    &.warning {
+      background: $warning-red-light;
+    }
+  }
+
+  .modal-content {
+    padding: 20px 30px;
+  }
+
+  .modal-actions {
+    @include flex-container(column, space-between, center);
+    padding: 0 30px 30px;
+
+    .button {
+      width: 100%;
+    }
+  }
+
+  .modal-escape {
+    margin: 10px 0 0 ;
+  }
+}
+
+.modal-form {
+  @include flex-container(column, center, stretch);
+  padding: 20px 0;
+  
+  ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+  }
+
+  li {
+    margin: 0 0 12px;
+    padding: 0;
+  }
+
+  input {
+    margin: 0 .25em;
+    padding: 0;
+  }
+
+  label {
+    font-size: 1.8rem;
+    position: relative;
+    margin-left: 5px;
+    top: 2px;
+  }
+
+  .additional-feedback {
+    background: rgba($black, .05);
+    border: 1px solid $transparent-black-1;
+    border-radius: 2px;
+    margin: 20px 0 0;
+    padding: 10px;
+  }
+
+  .text-area-label {
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .form-notification {
+    animation: scale-in 100ms;
+    border: 1px solid $warning-red-lightest;
+    background: rgba($warning-red-lightest, .5);
+    border-radius: 3px;
+    display: block;
+    margin: 0 0 10px;
+    padding: 6px;
+    text-align: center;
+  }
+
+  textarea {
+    border: 1px solid $feedback-modal-grey;
+    display: block;
+    font-size: 1.4rem;
+    height: 8em;
+    padding: 5px;
+    resize: none;
+    width: 100%;
+  }
+
+
+}
+
+//This should not ship.
+#browser-doorhanger {
+  @include flex-container(column, center, stretch);
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 1px $transparent-black-5,
+              0 4px 10px $transparent-black-3;
+  padding: 20px;
+  position: absolute;
+  right: 2px;
+  text-align: center;
+  top: 2px;
+  width: 300px;
+  z-index: 2; 
+
+  &.main {
+    padding: 0;
+  }
+}
+
+#browser-doorhanger-wrapper {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.doorhanger-experiment {
+  @include flex-container(row, space-between, center);
+  padding: 15px;
+
+  &:hover {
+    background-color: $transparent-black-1;
+    @include hidpi-background-image('dh-arrow',16px 16px);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+  }
+}
+
+.doorhanger-icon-wrapper {
+  height: 50px;
+  flex: 0 0 50px;
+  border-radius: 50%;
+  transition: background 100ms;
+  box-shadow: 0 0 0 2px $white;
+  position: relative;
+
+  .active & {
+    box-shadow: 0 0 0 2px $white, 0 0 0 4px $primary;
+
+  &:after {
+    @include hidpi-background-image('small-check', 12px 9px);
+    background-color: $primary;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 2px solid $white;
+    border-radius: 50%;
+    content: '';
+    height: 24px;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    width: 24px;
+    }
+  }
+}
+
+.doorhanger-icon {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+
+} 
+
+.doorhanger-experiment-title {
+  flex: 1;
+  text-align: left;
+  padding: 0 20px;
+
+  .active-span {
+    display: block;
+    color: $primary;
+    font-size: 14px;
+  }
+}
+
+.view-all {
+  border-top: 1px solid $transparent-black-2;
+  display: block;
+  background: $transparent-black-1;
+  padding: 15px;
+  color: $black;
+  transition: background 100ms;
+
+  &:hover {
+    background: $transparent-black-2;
+  }
+}
+
+
+
+.tour-modal {
+  animation: none;
+  padding: 0;
+
+  .tour-content {
+    position: relative;
+  }
+
+  .tour-text {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background: $transparent-white-5;
+  }
+
+  .tour-image {
+    @include flex-container(row, center, center);
+    height: 315px;
+    background: $transparent-black-1;
+  }
+
+  .tour-actions {
+    @include flex-container(row, space-between, center);
+    height: 92px;
+    padding: 20px;
+    opacity: .8;
+  }
+
+  .tour-next,
+  .tour-back {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tour-back {
+    @include hidpi-background-image('back', 40px 40px);
+  }
+
+
+  .tour-next {
+    @include hidpi-background-image('next', 40px 40px);
+  }
+
+  .button {
+    margin: 0 auto;
+  }
+}
+
+
+

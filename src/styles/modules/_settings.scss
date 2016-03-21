@@ -1,0 +1,89 @@
+.settings-button {
+  @include flex-container(row, space-between, center);
+  background: $transparent-white-2;
+  border: 1px solid $transparent-white-3;
+  border-radius: 7px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 150%;
+  padding: 0 6px;
+  text-align: center;
+  transition: background 100ms;
+  width: 46px;
+
+  &.active,
+  &:hover {
+    background: $transparent-white-4;
+  }
+
+  span {
+    background: $white;
+    border-radius: 50%;
+    display: inline-block;
+    flex: 0 0 8px;
+    height: 8px;
+  }
+
+  &:hover:not(.active) {
+    :nth-child(1) {
+      animation: pop 200ms;
+    }
+
+    :nth-child(2) {
+      animation: pop 200ms;
+      animation-delay: 50ms;
+    }
+
+    :nth-child(3) {
+      animation: pop 200ms;
+      animation-delay: 100ms;
+    }
+  }
+}
+
+.settings-contain {
+  position: relative;
+}
+
+.settings-menu {
+  background: $white;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px 1px $transparent-black-2;
+  left: -114px;
+  position: absolute;
+  top: 45px;
+  width: 160px;
+  z-index: 999;
+
+  &:after {
+    border-bottom: 10px solid $white;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    content: '';
+    left: 126px;
+    position: absolute;
+    top: -10px;
+  }
+
+  a {
+    color: $default;
+    cursor: pointer;
+    display: block;
+    line-height: 2.6rem;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 10px 15px;
+  }
+
+  li {
+    list-style: none;
+  }
+}

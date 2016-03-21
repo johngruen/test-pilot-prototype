@@ -1,0 +1,60 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 36px;
+  line-height: 48px;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+p {
+  line-height: 2.5rem;
+}
+
+.parens {
+  margin-bottom: 2rem;
+}
+
+.emphasis {
+  font-style: italic;
+}
+
+.lighter {
+  font-weight: 300;
+}
+
+
+.help-button {
+  @include flex-container(row, flex-end, center);
+  z-index: 9999999;
+  position: fixed !important;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+  background: $transparent-white-9;
+  border-top: 1px solid $transparent-black-5;
+
+  > * {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,74 @@
+
+{
+    "title":"Firefox Test Pilot",
+    "tests": [
+      {
+        "title": "Activity Stream",
+        "slug": "activity-stream",
+        "path": "tests/activity-stream.html",
+        "short" : "A rich visual history feed and a reimagined home page make it easier than ever to find exactly what you're looking for in Firefox.",
+        "users" : "2,452",
+        "colorway": [
+          "#DD6EA7",
+          "#AD98F7",
+          "66deg"
+        ]
+      },
+      {
+        "title": "Universal Search",
+        "slug": "universal-search",
+        "path": "tests/universal-search.html",
+        "short" : "A unified search experience for Firefox with smart search suggestions based on your browsing history.",
+        "users": "764",
+        "colorway": [
+          "#FB8B66",
+          "#878BF9",
+          "144deg"
+        ]
+      },
+      {
+        "title": "Tab Center",
+        "slug": "tab-center",
+        "path": "tests/tab-center.html",
+        "short" : "What would it be like to move tabs from the top of the browser to the side? We wanted to find out!",
+        "users": "25,521",
+        "colorway": [
+          "#ADEEA7",
+          "#89B7CB",
+          "300deg"
+        ]
+      },
+      {
+        "title": "Page Shot",
+        "slug": "page-shot",
+        "path": "tests/page-shot.html",
+        "short" : "Dead simple screenshotting. Easily capture, save, and share screenshots straight from your browser.",
+        "users": "17,201",
+        "colorway": [
+          "#ACEACE",
+          "#F898DC",
+          "220deg"
+        ]
+      }
+    ],
+    "index": {
+      "signIn": "Sign in",
+      "primaryButton": "Get started with a Firefox Account",
+      "legalBoilerplate": "By proceeding, you agree to the Terms of Service and Privacy Notice of Firefox Test Pilot.",
+      "featureOverview": "Try these features today with Test Pilot",
+      "subTitle": [
+        "Test new features.",
+        "Give us feedback.",
+        "Help build Firefox."
+      ]
+    },
+    "getAddOn": {
+      "primaryButton": "Install the Add-on",
+      "hangerText": "Test Pilot lets you test out experimental features in Firefox. Ready for takeoff?",
+      "hangerButton": "Let's go",
+      "subTitle": [
+        "Install the Test Pilot Add-on",
+        "and you're good to go"
+      ]
+    }
+}

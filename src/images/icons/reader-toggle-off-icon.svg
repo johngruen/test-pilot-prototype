@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="24"
+     height="24"
+     viewBox="0 0 24 24">
+
+  <style>
+    .style-reader-UI {
+      fill: #5c6166;
+    }
+  </style>
+       
+  <defs>
+    <mask id="cutout-circle">
+      <rect width="24" height="24" fill="#fff" />
+      <circle cx="20" cy="4" r="6" fill="#000" />
+    </mask>
+  </defs>
+
+  <g id="icon-reader-list-add" class="style-reader-UI">
+    <path d="M 0,5 a 2,2 0 0,1 2,-2 l 7,0 a 3,2 0 0,1 3,2 a 3,2 0 0,1 3,-2 l 7,0 a 2,2 0 0,1 2,2 l 0,12 a 2,2 0 0,1 -2,2 l -7,0 a 3,2 0 0,0 -3,2 a 3,2 0 0,0 -3,-2 l -7,0 a 2,2 0 0,1 -2,-2 z
+             M 2,5 l 7,0 a 3,2 0 0,1 3,2 a 3,2 0 0,1 3,-2 l 7,0 l 0,12 l -7,0 a 3,2 0 0,0 -3,2 a 3,2 0 0,0 -3,-2 l -7,0 z"
+             fill-rule="evenodd" mask="url(#cutout-circle)" id="shape-book" />
+    <g id="shape-plus-sign">
+      <rect x="16" y="3" width="8" height="2" rx="1" ry="1" />
+      <rect x="19" y="0" width="2" height="8" rx="1" ry="1" />
+    </g>
+    <g id="shape-text-lines">
+      <rect x="4" y="7" width="6" height="2" />
+      <rect x="4" y="10" width="6" height="2" />
+      <rect x="4" y="13" width="6" height="2" />
+    </g>
+  </g>
+
+</svg>

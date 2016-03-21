@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg version="1.1"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="48"
+     height="16"
+     viewBox="0 0 48 16">
+       
+  <defs>
+
+    <style type="text/css">
+    <![CDATA[
+      
+      .style-icon-notification {
+        fill: #666666;
+      }
+
+      .style-icon-notification.hover {
+        fill: #808080;
+      }
+
+      .style-icon-notification.active {
+        fill: #4d4d4d;
+      }
+      
+    ]]>
+    </style>
+
+  	<path id="shape-notifcations-push" d="M14,6.1V1.5C14,1.2,13.8,1,13.5,1c-0.1,0-0.2,0-0.3,0.1L9,4v0H3 C2.4,4,2,4.4,2,5v1H1.5C1.2,6,1,6.2,1,6.5v2C1,8.8,1.2,9,1.5,9H2v1c0,0.6,0.4,1,1,1h0.2l3,3.7C6.2,14.8,6.4,15,6.6,15h1.9 c0.4,0,0.7-0.6,0.4-0.9L6.4,11H9v0l4.2,2.9c0.1,0,0.2,0.1,0.3,0.1c0.3,0,0.5-0.2,0.5-0.5V8.9c0.6-0.2,1-0.8,1-1.4S14.6,6.3,14,6.1z M13,11.6L9,8.8V6.1l4-2.8V11.6z"/>
+
+  </defs>
+
+  <use xlink:href="#shape-notifcations-push" transform="translate(0)"  class="style-icon-notification" />
+  <use xlink:href="#shape-notifcations-push" transform="translate(16)" class="style-icon-notification hover" />
+  <use xlink:href="#shape-notifcations-push" transform="translate(32)" class="style-icon-notification active" />
+    
+</svg>

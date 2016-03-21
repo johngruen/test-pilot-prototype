@@ -1,0 +1,19 @@
+extends ./../partials/layout.jade
+
+block content
+  
+  .blue#retire
+    #full-page-wrapper.centered(data-hook='retire-page')
+      .centered-banner
+        .loading-pill
+            h1.emphasis Shutting down Test Pilot...
+            .state-change-inner
+        #four-oh-four.modal.no-display
+          header
+            h1(data-l10n-id='notFoundHeader').title Thanks Again!
+          .modal-content
+            p.
+              Before you go, we want to thank you for contributing to Test Pilot. <br> You're welcome back any time!
+          .modal-actions
+            a.button.default.large(data-l10n-id='home', href='/') Home
+        .copter.no-display

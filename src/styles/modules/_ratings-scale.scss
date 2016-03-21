@@ -1,0 +1,85 @@
+#fake-page {
+  background-image: url('../images/nyt.gif');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 1014px 1014px;
+  height: 1014px;
+  position: relative;
+  width: 100%;
+}
+
+
+#ratings-scale {
+  @include flex-container(row, space-between, center);
+  background: linear-gradient(-179deg, #fbfbfb, #ebebeb);
+  border-bottom: 1px solid #c1c1c1;
+  color: $black;
+  font-size: 11px;
+  font-weight: 700;
+  height: 40px;
+  padding: 0 5px 0 12px;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 999;
+  font-family: sans-serif;
+
+  > div {
+    @include flex-container(row, center, center);
+  }
+
+  p {
+    margin: 0 12px;
+    line-height: 11px;
+    position: relative;
+    top: 1px;
+  }
+
+  .ratings-icon-wrapper {
+    flex: 0 0 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px $white;
+  }
+
+  .ratings-icon {
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+  }
+
+  .stars {
+    @include flex-container(row, center, center);
+    flex: 0;
+  }
+
+  .star {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background: url(chrome://browser/skin/heartbeat-star-off.svg);
+
+    &.rated {
+      background: url(chrome://browser/skin/heartbeat-star-lit.svg);
+    }
+  }
+
+  .close {
+    width: 16px;
+    height: 16px;
+    background-size: 64px 16px;
+    background-image: url(chrome://global/skin/icons/close@2x.png);
+
+    &:hover {
+      background-position: -16px 0;
+    }
+
+    &:active {
+      background-position: -32px 0;
+    }
+  }
+}
+
+

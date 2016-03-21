@@ -1,0 +1,268 @@
+.hidden {
+  opacity: 0;
+}
+
+.no-display {
+  display: none !important;
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.fade-in {
+  animation: fade-in 500ms forwards;
+}
+
+.fade-out {
+  animation: fade-out 500ms forwards;
+}
+
+.delayed-fade-in {
+  animation: fade-in 500ms forwards;
+  animation-delay: 1000ms;
+  opacity: 0;
+}
+
+.spin {
+  animation: spin 1000ms;
+}
+
+.hover {
+  animation: hover 1000ms infinite alternate ease-in-out;
+}
+
+.fly-down {
+  animation: fly-down 500ms forwards ease-out;
+}
+
+.fly-out {
+  animation: fly-out 500ms forwards ease-in;
+}
+
+.delayed-fade-out {
+  animation: fade-out 500ms forwards linear;
+  animation-delay: 1000ms;
+  transform-origin: center top;
+}
+
+.scale-out {
+  animation: scale-out 500ms forwards;
+  opacity: 0;
+  overflow: hidden;
+}
+
+
+.fly-left {
+  animation: fly-left 500ms forwards ease-out;
+}
+
+.fly-up {
+  animation: fly-up 500ms forwards ease-out;
+}
+
+.hover {
+  animation: hover 1000ms infinite alternate ease-in-out;
+}
+
+.move-down-fade-in {
+  animation: move-down-fade-in 700ms forwards ease-out;
+}
+
+.quick-pop {
+  animation: pop 200ms;
+}
+
+.scale-doorhanger-in {
+  animation: scale-doorhanger-in 500ms;
+  transform-origin: 250px top;
+}
+
+@keyframes scale-doorhanger-in {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    transform: scale(1, 0);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes scale-out {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0px;
+  }
+}
+
+@keyframes sweep {
+  0% {
+    transform: translate(-60px, 0);
+  }
+  
+  100% {
+    transform: translate(190px, 0);
+  }
+}
+
+@keyframes move-in-from-right {
+  0% {
+    right: -100px;
+    opacity: 0;
+  }
+  
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 15px);
+  }
+}
+
+@keyframes fly-down {
+  0% {
+    transform: translate(0, -130px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fly-left {
+  0% {
+    transform: translate(130px, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fly-up {
+  0% {
+    transform: translate(0, 130px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes fly-out{
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, -150px);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes move-down-fade-in {
+  0% {
+    opacity: 0;
+    top: -40px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+@keyframes move-up-fade-in {
+  0% {
+    opacity: 0;
+    top: 40px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes barberpole {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 100px 50px;
+  }
+}
+
+@keyframes hover {
+  0% {
+    transform: translate(0, -10px);
+  }
+
+  100% {
+    transform: translate(0, 10px);
+  }
+}

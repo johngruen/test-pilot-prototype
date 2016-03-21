@@ -1,0 +1,51 @@
+@mixin flex-container($direction, $justification, $alignment, $wrap: nowrap) {
+  display: flex;
+  @if $alignment != 'stretch' {
+    align-items: $alignment;
+  }
+  @if $direction != 'row' {
+    flex-direction: $direction;
+  }
+  @if $justification != 'flex-start' {
+    justify-content: $justification;
+  }
+  @if $wrap != 'nowrap' {
+    flex-wrap: $wrap;
+  }
+}
+
+// Breakpoint controls
+$breakpoints: (
+  big: '(min-width: 1060px)',
+  medium: '(max-width: 1059px) and (min-width: 769px)',
+  small: '(max-width: 768px)'
+);
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+  } @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`. '
+    + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+// Image Manangement
+
+@mixin hidpi-background-image($filename, $background-size: 'mixed', $extension: png) {
+  background-image: url('../images/#{$filename}.#{$extension}');
+  @if ($background-size != 'mixed') {
+    background-size: $background-size;
+  }
+  @media (min--moz-device-pixel-ratio: 1.3),
+    (-o-min-device-pixel-ratio: 2.6/2),
+    (-webkit-min-device-pixel-ratio: 1.3),
+    (min-device-pixel-ratio: 1.3),
+    (min-resolution: 1.3dppx) {
+    background-image: url('../images/#{$filename}@2x.#{$extension}');
+    }
+}
+
+

@@ -1,0 +1,47 @@
+extends ./../partials/layout.jade
+
+block content
+  #index
+    .blue
+      header#main-header.content-wrapper
+        h1
+          span.firefox-logo
+          span #{title}
+        a.button.outline(href="get-the-add-on.html") #{index.signIn}
+      .centered-banner
+        .copter-wrapper
+          .copter.fly-up
+        h2
+          span #{index.subTitle[0]}
+          span #{index.subTitle[1]}
+          span #{index.subTitle[2]}
+        a.button.large.primary(href="get-the-add-on.html" data-response="toggle") #{index.primaryButton}
+        include ./../partials/not-firefox.jade
+      p.legal-information #{index.legalBoilerplate}
+    #experiment-list.content-wrapper
+      header
+        h2.emphasis #{index.featureOverview}
+      each test in tests
+        .experiment-summary
+          .experiment-icon-wrapper(style='background: linear-gradient(#{test.colorway[2]},#{test.colorway[0]},#{test.colorway[1]})')
+            .experiment-icon(class="#{test.slug}")
+          .experiment-information
+            header
+              h3 #{test.title}
+            p #{test.short}
+    .blue
+      footer#main-footer.content-wrapper
+        .centered-banner
+          .copter-wrapper
+            .copter
+          .copy
+            h2 More tests coming soon!
+            a.button.large.primary(data-response="toggle" href="get-the-add-on.html") #{index.primaryButton}
+            include ./../partials/not-firefox.jade
+
+        include ./../partials/footer-links.jade
+
+  .help-button
+    span Helpers: 
+    button.button.default(data-trigger="toggle") Show/Hide Non-FF UI
+

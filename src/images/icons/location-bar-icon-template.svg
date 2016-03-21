@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="16" viewBox="0 0 48 16">
+       
+  <style>
+    .icon-default {
+      fill: #999999;
+    }
+    
+    .icon-hover {
+      fill: #808080;
+    }
+    
+    .icon-active {
+      fill: #666666;
+    }
+  </style>
+
+  <defs>
+    <mask id="mask-ring-cutout">
+      <rect width="16" height="16" fill="#000" />
+      <circle cx="8" cy="8" r="7" fill="#fff" />
+      <circle cx="8" cy="8" r="6" fill="#000" />
+    </mask>
+  </defs>
+
+  <g id="site-info" class="icon-default">
+    <circle cx="8" cy="8" r="7" mask="url(#mask-ring-cutout)" />
+    <g>
+      <circle cx="8" cy="5" r="1" />
+      <rect x="7" y="7" width="2" height="5" rx="1" ry="1" />
+    </g>
+  </g>
+
+  <g id="site-info-hover" class="icon-hover" transform="translate(16)">
+    <circle cx="8" cy="8" r="7" />
+    <g fill="#fff">
+      <circle cx="8" cy="5" r="1" />
+      <rect x="7" y="7" width="2" height="5" rx="1" ry="1" />
+    </g>
+  </g>
+
+  <g id="site-info-active" class="icon-active" transform="translate(32)">
+    <circle cx="8" cy="8" r="7" />
+    <g fill="#fff">
+      <circle cx="8" cy="5" r="1" />
+      <rect x="7" y="7" width="2" height="5" rx="1" ry="1" />
+    </g>
+  </g>
+
+</svg>

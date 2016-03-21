@@ -1,0 +1,29 @@
+extends ./../partials/layout.jade
+
+block content
+  #get-the-add-on
+    #browser-doorhanger-wrapper.no-display(data-response="install-addon")
+      #browser-doorhanger
+        .copter-wrapper
+          .copter
+        p #{getAddOn.hangerText}
+        a.button.default(href='home.html') #{getAddOn.hangerButton}
+
+  #full-page-wrapper.space-between
+    header#main-header.content-wrapper
+      h1
+        span.firefox-logo
+        span #{title}
+    .centered-banner
+      .copter-wrapper
+        .copter.fly-down
+      h2
+        span #{getAddOn.subTitle[0]}
+        span #{getAddOn.subTitle[1]}
+      button.button.large.default(data-trigger="install-addon")
+        span #{getAddOn.primaryButton}
+        .state-change-inner.no-display
+
+    footer#main-footer.content-wrapper
+      include ./../partials/footer-links
+
