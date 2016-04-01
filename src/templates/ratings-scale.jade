@@ -1,18 +1,20 @@
 extends ./../partials/layout.jade
 
 block content
+  #fpw
+    #fake-page
+    #ratings-scale.no-display
+      div
+        .ratings-icon-wrapper(style='background: linear-gradient(#{tests[0].colorway[2]},#{tests[0].colorway[0]},#{tests[0].colorway[1]})')
+          .ratings-icon(class="#{tests[0].slug}")
+        p Please Rate Activity Stream
+        .stars
+          .star(data-id=0).not-selected
+          .star(data-id=1).not-selected
+          .star(data-id=2).not-selected
+          .star(data-id=3).not-selected
+          .star(data-id=4).not-selected
+      div
+        .close
 
-  #fake-page
-  #ratings-scale.no-display
-    div
-      .ratings-icon-wrapper(style='background: linear-gradient(#{tests[0].colorway[2]},#{tests[0].colorway[0]},#{tests[0].colorway[1]})')
-        .ratings-icon(class="#{tests[0].slug}")
-      p Please Rate Activity Stream
-      .stars
-        .star(data-id=0).not-selected
-        .star(data-id=1).not-selected
-        .star(data-id=2).not-selected
-        .star(data-id=3).not-selected
-        .star(data-id=4).not-selected
-    div
-      .close
+    include ./../partials/modals.jade

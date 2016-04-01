@@ -96,10 +96,10 @@ $(function () {
 
   $('[data-hook=feedback]').click(function () {
     $(this).find('.state-change-inner').removeClass('no-display');
-    $(this).find('span').html('Loading feedback...');
+    $(this).find('span').html('Loading survey...');
     setTimeout(function () {
-      var l = window.location;
-      window.location = 'https://people.mozilla.org/~jgruen/test-pilot/external-survey.html';
+      var l = 'https://people.mozilla.org/~jgruen/test-pilot/external-survey.html';
+      openInNewTab(l);
     }, 2000);
   });
 
@@ -118,7 +118,6 @@ $(function () {
     setTimeout(function () {
       $('.loading-pill').addClass('no-display');
       $('.copter').add('.modal').removeClass('no-display').addClass('fade-in');
-      window.open('https://people.mozilla.org/~jgruen/test-pilot/external-survey.html');
     }, 2500);
   }
 
@@ -182,10 +181,6 @@ $('.doorhanger-experiment').click(function () {
   window.location = 'https://people.mozilla.org/~jgruen/test-pilot/activity-stream.html';
 });
 
-setTimeout(function(){
-  $('#ratings-scale').toggleClass('no-display').toggleClass('fly-down');
-}, 2000);
-
 var stars = 0;
 $('.not-selected').hover(function(){
   stars = $(this).index();
@@ -213,9 +208,19 @@ $('#ratings-scale .close').click(function(){
 });
 
 
+function openInNewTab(url) {
+  var win = window.open(url, '_blank');
+  win.focus();
+}
 
+$('#fpw .modal-container, #fpw .editorial-modal').toggleClass('no-display');
 
-
+$('[data-hook=show-ratings]').click(function() {
+  $('.modal-container').toggleClass('no-display');
+  setTimeout(function(){
+    $('#ratings-scale').toggleClass('no-display').toggleClass('fly-down');
+  }, 400);
+});
 
 
 
