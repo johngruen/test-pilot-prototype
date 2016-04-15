@@ -8,21 +8,23 @@ block content
         p #{getAddOn.hangerText}
         a.button.default(href='home.html') #{getAddOn.hangerButton}
 
-  .full-page-wrapper.space-between
-    header#main-header.responsive-content-wrapper
-      h1
-        span.firefox-logo
-        span #{title}
-    .centered-banner
-      .copter-wrapper
-        .copter.fly-down
-      h2.banner
-        span.block #{getAddOn.subTitle[0]}
-        span.block #{getAddOn.subTitle[1]}
-      button.button.large.default(data-trigger="install-addon")
-        span #{getAddOn.primaryButton}
-        .state-change-inner.no-display
+  .blue
+    .stars
+    .full-page-wrapper.space-between
+      header#main-header.responsive-content-wrapper
+        h1
+          span.firefox-logo
+          span #{title}
+      .centered-banner
+        .copter-wrapper
+          .copter.fly-down
+        h2.banner
+          span.block #{getAddOn.subTitle[0]}
+          span.block #{getAddOn.subTitle[1]}
+        button.button.large.primary(data-trigger="install-addon")
+          span #{getAddOn.primaryButton}
+          .state-change-inner.no-display
 
-    footer#main-footer.content-wrapper
-      include ./../partials/footer-links
+      footer#main-footer.content-wrapper
+        include ./../partials/footer-links
 
