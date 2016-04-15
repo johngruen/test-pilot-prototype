@@ -1,0 +1,23 @@
+// MIXINS AND SHIT FROM THE REPO
+
+@import './../styles/variables';
+@import './../styles/hidpi-mixin';
+@import './../styles/mixins';
+
+// SHOULD BE INTEGRATED INTO MODULES
+// AS THE RELEVANT UI IS IMPLEMENETED
+// NOT YET IN THE MAIN REPO
+
+@import 'modals';
+@import 'buttons';
+@import 'state';
+
+.centered {
+  text-align: center;
+}
+
+// THIS FILE ADDS OR OVERWRITES STUFF ALL OTHER SCSS
+// THE IDEA IS TO KEEP OTHER STYLES AS CLOSE TO PROD.NOW
+// OR PROD.SOON AS POSSIBLE
+
+@import 'prototype-only';

@@ -1,0 +1,88 @@
+.modal {
+
+  .modal-escape {
+    color: $default;
+    margin: 10px 0 0;
+  }
+
+  .modal-content {
+    overflow: hidden;
+  }
+
+  + .copter-wrapper,
+  .copter-wrapper {
+    margin-top: 10px;
+    height: 160px;
+
+    .copter {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 220px auto;
+      height: 180px;
+    }
+  }
+}
+
+.loading-pill {
+  padding: 10px;
+  position: relative;
+  border: 1px solid $transparent-white-3;
+  border-radius: 4px;
+
+  > * {
+    margin: 0;
+  }
+}
+
+
+.tour-modal {
+  animation: none;
+  padding: 0;
+
+  .tour-content {
+    position: relative;
+  }
+
+  .tour-text {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background: $transparent-white-5;
+  }
+
+  .tour-image {
+    @include flex-container(row, center, center);
+    height: 315px;
+    background: $transparent-black-1;
+  }
+
+  .tour-actions {
+    @include flex-container(row, space-between, center);
+    height: 92px;
+    padding: 20px;
+    opacity: .8;
+  }
+
+  .tour-next,
+  .tour-back {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tour-back {
+    @include hidpi-background-image('back', 40px 40px);
+  }
+
+
+  .tour-next {
+    @include hidpi-background-image('next', 40px 40px);
+  }
+
+  .button {
+    margin: 0 auto;
+  }
+}
+
+

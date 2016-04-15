@@ -57,7 +57,7 @@
       "legalBoilerplate": "By proceeding, you agree to the Terms of Service and Privacy Notice of Firefox Test Pilot.",
       "featureOverview": "Try these features today with Test Pilot",
       "subTitle": [
-        "Test new features.",
+        "Test out new features.",
         "Give us feedback.",
         "Help build Firefox."
       ]
@@ -68,7 +68,7 @@
       "hangerButton": "Let's go",
       "subTitle": [
         "Install the Test Pilot Add-on",
-        "and you're good to go"
+        "and you're good to go!"
       ]
     }
 }
