@@ -19,6 +19,16 @@ gulp.task('styles', function () {
     .pipe(livereload());
 });
 
+gulp.task('prototype-styles', function () {
+  return gulp.src('./src/prototype-styles/prototype-styles.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({ includePaths: normalize.includePaths }).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(sourcemaps.write({ sourceRoot: 'src/styles' }))
+    .pipe(gulp.dest('./app/styles'))
+    .pipe(livereload());
+});
+
 gulp.task('templates', function () {
   return gulp.src('./src/templates/**/*.jade')
   .pipe(data(function () {
@@ -47,12 +57,13 @@ gulp.task('move:script', function () {
     .pipe(livereload());
 });
 
-gulp.task('build', ['move:jquery', 'move:script', 'move:images', 'templates', 'styles']);
+gulp.task('build', ['move:jquery', 'move:script', 'move:images', 'templates', 'styles', 'prototype-styles']);
 
 gulp.task('server', function () {
   gulp.src('app')
     .pipe(webserver({
-      directoryListing: false
+      directoryListing: false,
+      port: 3000
     }));
 });
 
@@ -60,6 +71,7 @@ gulp.task('default', ['build', 'server'], function () {
   livereload.listen();
   gulp.watch('./data.json', ['templates']);
   gulp.watch('./src/styles/**/*.scss', ['styles']);
+  gulp.watch('./src/prototype-styles/**/*.scss', ['prototype-styles']);
   gulp.watch('./src/**/*.jade', ['templates']);
   gulp.watch('./src/**/*.js', ['move:script']);
   gulp.watch('./dist/**').on('change', livereload.changed);

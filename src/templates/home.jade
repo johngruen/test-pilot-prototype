@@ -3,31 +3,32 @@ extends ./../partials/layout.jade
 block content
   #home
     .blue
+      .stars
 
       include ./../partials/header.jade
 
-      .centered-banner
+      .reverse-split-banner.responsive-content-wrapper
         .copter-wrapper
           .copter.fly-left
         .intro-text
           h2 Welcome to Firefox Test Pilot!
           p We're always trying out new features in Firefox. <br> Pick any of the tests below to see what we're working on!
+      .responsive-content-wrapper
+        #experiment-list.experiments
+          each test in tests
 
-    #experiment-list.content-wrapper
-       each test in tests
-
-          a.experiment-summary(href="activity-stream.html")
-            .experiment-icon-wrapper(style='background: linear-gradient(#{test.colorway[2]},#{test.colorway[0]},#{test.colorway[1]})')
-              .experiment-icon(class="#{test.slug}")
-            .experiment-information
-              header
-                h3 #{test.title}
-              p #{test.short}
-            .experiment-actions   
-              .actions.no-display
-                button.button.secondary(data-type='manage') Manage
-              .actions
-                button.button.default(href="#{test.path}") Get Started
+            a.experiment-summary(href="activity-stream.html").logged-in
+              .experiment-icon-wrapper(style='background: linear-gradient(#{test.colorway[2]},#{test.colorway[0]},#{test.colorway[1]})')
+                .experiment-icon(class="#{test.slug}")
+              .experiment-information
+                header
+                  h3 #{test.title}
+                p #{test.short}
+              .experiment-actions
+                .actions.no-display
+                  button.button.secondary(data-type='manage') Manage
+                .actions
+                  button.button.default(href="#{test.path}") Get Started
 
     include ./../partials/modals.jade
 

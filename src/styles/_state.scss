@@ -1,204 +1,72 @@
-.hidden {
-  opacity: 0;
-}
-
 .no-display {
-  display: none !important;
+  display: none;
 }
 
-.scroll-lock {
-  overflow: hidden;
-}
-
-.fade-in {
-  animation: fade-in 500ms forwards;
-}
-
-.fade-out {
-  animation: fade-out 500ms forwards;
-}
-
-.delayed-fade-in {
-  animation: fade-in 500ms forwards;
-  animation-delay: 1000ms;
+.delayed-fade-in-up {
+  animation: fade-in-up 500ms forwards ease-out;
+  animation-delay: 400ms;
   opacity: 0;
-}
-
-.spin {
-  animation: spin 1000ms;
-}
-
-.hover {
-  animation: hover 1000ms infinite alternate ease-in-out;
+  position: relative;
 }
 
 .fly-down {
   animation: fly-down 500ms forwards ease-out;
-}
-
-.fly-out {
-  animation: fly-out 500ms forwards ease-in;
-}
-
-.delayed-fade-out {
-  animation: fade-out 500ms forwards linear;
-  animation-delay: 1000ms;
-  transform-origin: center top;
-}
-
-.scale-out {
-  animation: scale-out 500ms forwards;
-  opacity: 0;
-  overflow: hidden;
-}
-
-
-.fly-left {
-  animation: fly-left 500ms forwards ease-out;
+  transform: translate(0, -130px);
 }
 
 .fly-up {
-  animation: fly-up 500ms forwards ease-out;
-}
-
-.hover {
-  animation: hover 1000ms infinite alternate ease-in-out;
-}
-
-.move-down-fade-in {
-  animation: move-down-fade-in 700ms forwards ease-out;
+  animation: bounceInUp 1200ms ease-out forwards;
+  transform: translate3d(3000px, 0, 0);
 }
 
 .quick-pop {
   animation: pop 200ms;
 }
 
-.scale-doorhanger-in {
-  animation: scale-doorhanger-in 500ms;
-  transform-origin: 250px top;
+.modal-bounce-in {
+  animation: bounceInUp 750ms;
 }
 
-@keyframes scale-doorhanger-in {
-  0% {
-    transform: scale(0, 0);
-  }
-  100% {
-    transform: scale(1, 1);
-  }
+.fade-in-fly-up {
+  animation: fade-in-fly-up 500ms;
 }
 
-
-@keyframes fade-in {
+@keyframes fade-in-up {
   0% {
     opacity: 0;
+    transform: translate3d(0, 120px, 0);
   }
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes fade-out {
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes scale-in {
-  0% {
-    transform: scale(1, 0);
-  }
-
-  100% {
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes scale-out {
-  0% {
-    height: 100%;
-  }
-  100% {
-    height: 0px;
-  }
-}
-
-@keyframes sweep {
-  0% {
-    transform: translate(-60px, 0);
-  }
-  
-  100% {
-    transform: translate(190px, 0);
-  }
-}
-
-@keyframes move-in-from-right {
-  0% {
-    right: -100px;
-    opacity: 0;
-  }
-  
-  100% {
-    left: 0;
-    opacity: 1;
-  }
-}
-
-@keyframes hover {
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(0, 15px);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 @keyframes fly-down {
   0% {
-    transform: translate(0, -130px);
+    transform: translate3d(0, -130px, 0);
   }
 
   100% {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-@keyframes fly-left {
+// Used on error and 404 pages
+@keyframes fade-in-fly-up {
   0% {
-    transform: translate(130px, 0);
+    opacity: 0;
+    transform: translate3d(0, 130px, 0);
   }
 
   100% {
-    transform: translate(0, 0);
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }
 
-@keyframes fly-up {
-  0% {
-    transform: translate(0, 130px);
-  }
-
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-@keyframes fly-out{
-  0% {
-    transform: translate(0, 0);
-  }
-
-  100% {
-    transform: translate(0, -150px);
-  }
-}
-
+// Used on settings dots and now active trobber
 @keyframes pop {
   0% {
     transform: scale(1);
@@ -213,56 +81,61 @@
   }
 }
 
-@keyframes move-down-fade-in {
-  0% {
-    opacity: 0;
-    top: -40px;
-  }
-
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
-
-@keyframes move-up-fade-in {
-  0% {
-    opacity: 0;
-    top: 40px;
-  }
-
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
-
-
-@keyframes spin {
-  0% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+// Used for the loader abuttons
 @keyframes barberpole {
-  from {
+  0% {
     background-position: 0 0;
   }
 
-  to {
+  100% {
     background-position: 100px 50px;
   }
 }
 
+// Used to hover the copter
 @keyframes hover {
   0% {
-    transform: translate(0, -10px);
+    transform: translate3d(0, -5px, 0);
   }
 
   100% {
-    transform: translate(0, 10px);
+    transform: translate3d(0, 5px, 0);
   }
 }
+
+// Used to bring in feedback forms
+// this comes from here:
+// https://github.com/daneden/animate.css/blob/master/source/bouncing_entrances/bounceInUp.css
+
+@keyframes bounceInUp {
+  from,
+  60%, 
+  75%, 
+  90%, 
+  to {
+    animation-timing-function: cubic-bezier(.215, .61, .355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 600px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+

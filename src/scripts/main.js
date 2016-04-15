@@ -196,11 +196,15 @@ function setStars(index) {
   }
 }
 
-$('.star').click(function() {
-  $('.star').each(function(){
+$('.rating-star').click(function() {
+  $('.rating-star').each(function(){
     $(this).addClass('selected').removeClass('not-selected').addClass('quick-pop');
   })
-  $('#ratings-scale').addClass('delayed-fade-out').find('p').text('Thank You!');
+  $('#ratings-scale').addClass('delayed-fade-out').removeClass('fly-down').find('p').text('Thank You!');
+  setTimeout(function() {
+    var a = window.open('https://people.mozilla.org/~jgruen/test-pilot/external-survey-2.html', '_blank');
+    window.focus();
+  }, 1500);
 });
 
 $('#ratings-scale .close').click(function(){
@@ -221,7 +225,6 @@ $('[data-hook=show-ratings]').click(function() {
     $('#ratings-scale').toggleClass('no-display').toggleClass('fly-down');
   }, 400);
 });
-
 
 
 

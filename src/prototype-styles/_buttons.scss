@@ -1,0 +1,18 @@
+.button {
+  &.warning {
+    background: $warning-red-light;
+    border: 1px solid $warning-red-default;
+    color: $white;
+    
+    &:hover,
+    &:focus {
+      background: $warning-red-default;
+      border: 1px solid $warning-red-dark;
+    }
+
+    &:active {
+      background: $warning-red-dark;
+      border: 1px solid $warning-red-darker;
+    }
+  }
+}

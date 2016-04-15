@@ -1,0 +1,332 @@
+.state-change-inner {
+  opacity: 1 !important;
+}
+
+
+// HEADER SHIT
+#main-header h1 a {
+  @include flex-container(row, flex-start, center);
+}
+
+// MODAL STUFF
+.modal-container.no-display,
+.experiment-controls.no-display {
+  display: none;
+}
+
+// EXPERIMENT SUMMARY STUFF
+a.experiment-summary {
+  color: $black;
+}
+
+.experiment-actions .button {
+  display: block;
+}
+
+.details-description {
+  @include respond-to('big') {
+    flex: 0 0 $grid-unit * 34;
+
+    .image {
+      height: 400px;
+      width: $grid-unit * 34;
+    }
+
+  }
+
+  @include respond-to('medium') {
+    flex: 0 0 $grid-unit * 25;
+
+    .image {
+      height: 400px;
+      width: $grid-unit * 25;
+    }
+  }
+
+  .image {
+    background: #eee;
+  }
+}
+
+// DOORHANGER FAKERY
+#browser-doorhanger {
+  @include flex-container(column, center, stretch);
+  background: $white;
+  border-radius: 5px;
+  box-shadow: 0 0 1px $transparent-black-5,
+              0 4px 10px $transparent-black-3;
+  padding: 20px;
+  position: absolute;
+  right: 2px;
+  text-align: center;
+  top: 2px;
+  width: 300px;
+  z-index: 2; 
+
+  &.main {
+    padding: 0;
+  }
+}
+
+#browser-doorhanger-wrapper {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .copter {
+    animation: fly-down 200ms;
+    transform: translate3d(0,0,0);
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 120px;
+    background-size: 150px auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+  }
+}
+
+.doorhanger-experiment {
+  @include flex-container(row, space-between, center);
+  padding: 15px;
+
+  &:hover {
+    background-color: $transparent-black-1;
+    @include hidpi-background-image('dh-arrow',16px 16px);
+    background-repeat: no-repeat;
+    background-position: 96% center;
+  }
+}
+
+.doorhanger-icon-wrapper {
+  height: 50px;
+  flex: 0 0 50px;
+  border-radius: 50%;
+  transition: background 100ms;
+  box-shadow: 0 0 0 2px $white;
+  position: relative;
+
+  .active & {
+    box-shadow: 0 0 0 2px $white, 0 0 0 4px $primary;
+
+  &:after {
+    @include hidpi-background-image('small-check', 12px 9px);
+    background-color: $primary;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: 2px solid $white;
+    border-radius: 50%;
+    content: '';
+    height: 24px;
+    position: absolute;
+    right: -7px;
+    top: -7px;
+    width: 24px;
+    }
+  }
+}
+
+.doorhanger-icon {
+  width: 50px;
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: center center;
+
+} 
+
+.doorhanger-experiment-title {
+  flex: 1;
+  text-align: left;
+  padding: 0 20px;
+
+  .active-span {
+    display: block;
+    color: $primary;
+    font-size: 14px;
+  }
+}
+
+.view-all {
+  border-top: 1px solid $transparent-black-2;
+  display: block;
+  background: $transparent-black-1;
+  padding: 15px;
+  color: $black;
+  transition: background 100ms;
+
+  &:hover {
+    background: $transparent-black-2;
+  }
+}
+
+// TEST ICONS
+
+.activity-stream {
+  background-image: url('../images/activity.svg');
+}
+
+.tab-center {
+  background-image: url('../images/tab.svg');
+}
+
+.universal-search {
+  background-image: url('../images/search.svg');
+}
+
+.page-shot {
+  background-image: url('../images/camera.svg');
+}
+
+// FAKE PAGE
+
+#fake-page {
+  background-image: url('../images/nyt.gif');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 1014px 1014px;
+  height: 1014px;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+
+
+#ratings-scale {
+  @include flex-container(row, space-between, center);
+  background: linear-gradient(-179deg, #fbfbfb, #ebebeb);
+  border-bottom: 1px solid #c1c1c1;
+  color: $black;
+  font-size: 11px;
+  font-weight: 700;
+  height: 40px;
+  padding: 0 5px 0 12px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: sans-serif;
+  top: 0;
+
+
+  &.no-display {
+    display: none;
+  }
+
+  > div {
+    @include flex-container(row, center, center);
+  }
+
+  p {
+    margin: 0 12px;
+    line-height: 11px;
+    position: relative;
+    top: 1px;
+  }
+
+  .ratings-icon-wrapper {
+    flex: 0 0 28px;
+    height: 28px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px $white;
+  }
+
+  .ratings-icon {
+    background-size: 16px 16px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 28px;
+    height: 28px;
+  }
+
+  .rating-stars {
+    @include flex-container(row, center, center);
+    flex: 0;
+  }
+
+  .rating-star {
+    width: 16px;
+    height: 16px;
+    margin-right: 3px;
+    background: url(chrome://browser/skin/heartbeat-star-off.svg);
+
+    &.rated {
+      background: url(chrome://browser/skin/heartbeat-star-lit.svg);
+    }
+  }
+
+  .close {
+    width: 16px;
+    height: 16px;
+    background-size: 64px 16px;
+    background-image: url(chrome://global/skin/icons/close@2x.png);
+
+    &:hover {
+      background-position: -16px 0;
+    }
+
+    &:active {
+      background-position: -32px 0;
+    }
+  }
+}
+
+.fade-out {
+  animation: fade-out 500ms forwards linear;
+}
+
+.delayed-fade-out {
+  transform: translate(0, 0);
+  animation: fade-out 500ms forwards linear;
+  animation-delay: 1000ms;
+  transform-origin: center top;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    poopacity: 0;
+  }
+}
+
+.help-button {
+  @include flex-container(row, flex-end, center);
+  z-index: 9999999;
+  position: fixed !important;
+  bottom: 0;
+  padding: 20px;
+  width: 100%;
+  background: $transparent-white-9;
+  border-top: 1px solid $transparent-black-5;
+
+  > * {
+    margin-left: 20px;
+  }
+}
+
+.state-change-inner {
+  animation: barberpole 1000ms infinite linear;
+  background-image: linear-gradient(
+    45deg,
+    $transparent-white-1 25%,
+    transparent 25%,
+    transparent 50%,
+    $transparent-white-1 50%,
+    $transparent-white-1 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 50px 50px;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity .1s ease;
+}
