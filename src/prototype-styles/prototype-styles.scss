@@ -16,6 +16,10 @@
   text-align: center;
 }
 
+.hidden {
+  visibility: hidden;
+}
+
 // THIS FILE ADDS OR OVERWRITES STUFF ALL OTHER SCSS
 // THE IDEA IS TO KEEP OTHER STYLES AS CLOSE TO PROD.NOW
 // OR PROD.SOON AS POSSIBLE

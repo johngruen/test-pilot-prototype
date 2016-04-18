@@ -51,7 +51,7 @@ $(function () {
   $('#browser-doorhanger-wrapper:not(.main)').click(function () {
     $(this).remove();
     $('.centered-banner')
-    .append('<a href="home.html" class="button large default quick-pop">Let\'s Go</a>');
+    .append('<a href="home.html" class="button large primary quick-pop">Let\'s Go</a>');
   });
 
   $('#home .test-summary').each(function (index) {
